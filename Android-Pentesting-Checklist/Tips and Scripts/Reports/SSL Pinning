@@ -1,0 +1,32 @@
+SSL Pinning Bypass
+
+Summary :It is a process where we can check the authenticity of a HOST by checking its core X509 certificate. This X509 certificate is the integral part of SSL. It was analyzed that the application lacks proper SSL Pinning.
+
+OWASP Category: M3: 2016 Insecure Communication
+
+Severity :   Medium  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can intercept traffic that goes through application easily using a proxy.
+
+Affected Path: Entire Application
+
+Recommendations : 
+The application should implement proper SSL Pinning. Whenever the application is communicating with the server it should validate if the traffic has been encrypted with the same key that matches the public key included in the application or not. Boolean based values should not be given in response which can be easily modified by an automated tool such as Frida instead try encrypting the response.
+ 
+References : 
+https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning
+https://vavkamil.cz/2019/09/15/how-to-bypass-android-certificate-pinning-and-intercept-ssl-traffic/
+https://blog.netspi.com/four-ways-bypass-android-ssl-verification-certificate-pinning/
+https://securitychops.com/2019/08/31/dev/random/one-liner-to-install-burp-cacert-into-android.html
+https://blog.ropnop.com/configuring-burp-suite-with-android-nougat/
+
+Proof of Concept :

@@ -1,0 +1,30 @@
+Fingerprint Detection Bypass
+
+Summary : Fingerprint or Biometric Detection is a method of simplifying login mechanism so that the end user does not need to manually enter password everytime he or she logins. It was analyzed that the application lacks proper Fingerprint checks and these are easily bypassable.
+
+OWASP Category: M4: 2016 Insecure Authentication
+
+Severity :   Medium  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can bypass the authentication mechanism used and can hence takeover the account of the user. The only disadvantage is the physical access of the device is needed.
+
+Affected Path: Entire Application
+
+Recommendations : 
+The application should implement User Presence validation by using kSecAccessControlUserPresence attributes. Boolean based values should not be given in response which can be easily modified by an automated tool such as Frida instead try encrypting the response.
+ 
+References : 
+https://hackerone.com/reports/331489
+https://hackerone.com/reports/490946
+https://hackerone.com/reports/637194
+
+Proof of Concept :

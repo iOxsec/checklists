@@ -1,0 +1,28 @@
+Insecure Local Storage - Shared Preference
+
+Summary : Insecure data storage vulnerabilities occur when development teams assume that users or malware will not have access to a mobile device’s filesystem and subsequent sensitive information in data-stores on the device. Filesystems are easily accessible.
+
+OWASP Category: M2: 2016 Insecure Data Storage
+
+Severity :   High   
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An adversary can steal and even manipulate sensitive data in the application. An adversary can also install malware and repackaging the application.
+
+Affected Path: /data/data/com.application.name/shared_prefs
+
+Recommendations : Sensitive data should always be stored in an encrypted format using strong encryption techniques such as SHA-256 or SHA-512.
+ 
+References : 
+https://hackerone.com/reports/57918
+https://hackerone.com/reports/44727	
+
+Proof of Concept :

@@ -1,0 +1,27 @@
+Weak Cryptographic Algorithms Used
+
+Summary : It was observed that weak cryptographic algorithms were used in the application for encryption and hashing.
+
+OWASP Category: M5: Insufficient Cryptography
+
+Severity :   Low  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+Impact : An Adversary can break the ciphered code gaining access to the plain text message hence impacting the Confidientiality and the Integrity of the data.
+
+Affected Path: Entire Application
+
+Recommendations :  The application should implement strong hashing algorithms like SHA-256 and SHA-512.
+ 
+References : 
+https://owasp.org/www-project-mobile-top-10/2016-risks/m5-insufficient-cryptography
+https://blog.oversecured.com/Use-cryptography-in-mobile-apps-the-right-way/
+
+Proof of Concept :

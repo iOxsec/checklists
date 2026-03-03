@@ -1,0 +1,30 @@
+Implicit Intent are used for Broadcast
+
+Summary : Applications that send broadcasts without specifying the broadcast target may have these broadcasts intercepted by malicious apps on the same device. Using implicit Intent, components can’t be specified. An action to be performed is declared by implicit intent. Then android operating system will filter out components that will respond to the action. Some applications were found to be using implicit intents for broadcast.
+
+OWASP Category: M7: Poor Code Quality
+
+Severity :   Medium  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can intercept the traffic by using malicious apps since the applications send broadcasts without specifying the broadcast target.
+
+Affected Path: Entire Application
+
+Recommendations : 
+Applications should use explicit Intents for IPC. If the intent is only broadcasted in the same application, LocalBroadcastManager should be used.
+ 
+References : 
+https://hackerone.com/reports/167481
+https://hackerone.com/reports/289000
+https://hackerone.com/reports/56002
+
+Proof of Concept :

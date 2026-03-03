@@ -1,0 +1,27 @@
+Dangerous Permissions
+
+Summary : Permissions help in restricting access to certain Android components like activities, broadcast receivers, services, and content providers. However it was noticed that some dangerous permissions were allowed. These “dangerous” permissions include access to your calling history, private messages, location, camera, microphone, and more. 
+
+OWASP Category: M7: 2016 Poor Code Quality
+
+Severity :   Low  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can misuse these permissions and can access sensitive data or information.
+
+Affected Path: Entire Application
+
+Recommendations : It is recommended to remove these permissions if they are not necessary.
+
+References : 
+https://blog.oversecured.com/Common-mistakes-when-using-permissions-in-Android/
+
+Proof of Concept :

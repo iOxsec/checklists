@@ -1,0 +1,30 @@
+Root Detection Bypass
+
+Summary :Android rooting is a technique that allows one to easily gain unrestricted access to the system files. It was analyzed that the application lacks proper Root and Emulator Detection checks which are bypassable.
+
+OWASP Category: M3: 2016 Insecure Communication
+
+Severity :   Medium  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : If attacker gets root access to the application, an adversary can access the source code of the application, database of the application and modify it. An adversary can read cookies and can modify the functions present within the application.
+
+Affected Path: Entire Application
+
+Recommendations : 
+The application should implement proper Root and Emulator Detection checks Pinning. Boolean based values should not be given in response which can be easily modified by an automated tool such as Frida instead try encrypting the response.
+ 
+References : 
+https://www.netspi.com/blog/technical/mobile-application-penetration-testing/android-root-detection-techniques/
+https://redfoxsec.com/blog/android-root-detection-bypass-using-frida/
+https://www.julianberton.com/2015/01/30/root-detection-bypass/
+
+Proof of Concept :

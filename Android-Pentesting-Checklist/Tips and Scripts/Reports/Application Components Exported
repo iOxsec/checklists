@@ -1,0 +1,28 @@
+Application Components Exported
+
+Summary : It was found that some applications were using components with exported=true flag enabled.
+
+OWASP Category: M3: 2016 Insecure Communication
+
+Severity :   Medium  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can access and run the android components for malicious purposes.
+
+Affected Path: Entire Application
+
+Recommendations : Applications should make export=false and also remove Intent filters.
+ 
+References : 
+https://hackerone.com/reports/258460
+https://hackerone.com/reports/161710
+https://hackerone.com/reports/272044
+https://hackerone.com/reports/289000
