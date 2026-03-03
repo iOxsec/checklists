@@ -1,0 +1,29 @@
+Application Components Debuggable
+
+Summary : It was found that some applications were using components with debug=true flag enabled.
+
+OWASP Category: M3: 2016 Insecure Communication
+
+Severity :   Low  
+
+Complexity : Easy 
+
+From : Remote / External
+
+Steps to Reproduce:
+
+Proof of Concept : Attached in the Video
+
+
+Impact : An Adversary can access sensitive data if debugging is enabled.
+
+Affected Path: Entire Application
+
+Recommendations : Applications should disable debugging.
+ 
+References : 
+https://resources.infosecinstitute.com/topic/android-hacking-security-part-6-exploiting-debuggable-android-applications/
+https://owasp.org/www-project-mobile-top-10/2016-risks/m3-insecure-communication
+
+
+Proof of Concept :
